@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panadería El Güero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fondo: #fbf3e4; --texto: #3b2412; --acento: #c96f1a; --claro: #f3dfbd; --tarjeta: #fffaf0;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fondo: #1d140c; --texto: #f5e9d6; --acento: #eaa04f; --claro: #332314; --tarjeta: #271a10;
+    }
+    :root:not([data-theme="light"]) p { color: #cdbfa8; }
+  }
+  :root[data-theme="dark"] {
+    --fondo: #1d140c; --texto: #f5e9d6; --acento: #eaa04f; --claro: #33231a; --tarjeta: #271a10;
+  }
+  :root[data-theme="dark"] p { color: #cdbfa8; }
+  *, *::before, *::after { box-sizing: inherit; }
+  body { margin: 0; background: var(--fondo); color: var(--texto); font-family: "DM Sans", system-ui, sans-serif; line-height: 1.6; }
+  main { max-width: 640px; margin: 0 auto; padding: 0 20px 48px; }
+  .hero { background: var(--claro); margin: 0 -20px; padding: 32px 20px 28px; text-align: center; }
+  .hero svg { width: 170px; height: 110px; }
+  h1, h2 { font-family: "Bree Serif", Georgia, serif; font-weight: 400; }
+  h2 { font-size: 1.6rem; margin: 40px 0 12px; }
+  p { margin: 0 auto 16px; max-width: 56ch; }
+  .boton { display: inline-block; background: var(--acento); color: #1d140c; text-decoration: none; font-weight: 600; padding: 14px 22px; }
+  .boton:focus-visible { outline: 3px solid var(--texto); outline-offset: 3px; }
+  .producto { display: flex; justify-content: space-between; gap: 16px; background: var(--tarjeta); border-radius: 14px; padding: 16px 18px; margin-bottom: 10px; }
+  .producto span:last-child { font-weight: 600; color: var(--acento); }
+  footer { text-align: center; font-size: .9rem; padding: 24px 20px; }
+
+  .producto { align-items: center; }
+  .producto svg { width: 44px; height: 44px; flex: none; }
+  .producto span:last-child { margin-left: auto; }
+  .opinion { background: var(--tarjeta); border-left: 5px solid var(--acento); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+  .opinion.rosa { border-left-color: #d9687e; }
+  .opinion.azul { border-left-color: #5b8fd9; }
+  .opinion p { margin: 0 0 6px; }
+  .estrellas { color: var(--acento); letter-spacing: 2px; }
+
+  /* ===== TUS REGLAS CSS ===== */
+  h1 {
+    font-size: 50px;
+    margin: 12px 0;
+    line-height: 1.05;
+  }
+  p {
+    color: dimgray;
+  }
+  .boton {
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 18px 32px;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <!-- svg = pan dibujado con código -->
+      <svg viewBox="0 0 170 110" role="img" aria-label="Pan recién horneado">
+        <ellipse cx="85" cy="62" rx="72" ry="38" fill="#d98b3a" stroke="#8a4b12" stroke-width="4"/>
+        <path d="M45 48L62 76M75 42L92 74M105 42L122 74" stroke="#8a4b12" stroke-width="5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <h1>Panadería El Güero</h1>
+      <p>Pan fresco todos los días, hecho con receta de familia. Haz tu pedido y pasa a recogerlo caliente.</p>
+      <a class="boton" href="https://wa.me/521234567890">Hacer pedido por WhatsApp</a>
+    </section>
+
+    <h2>Lo que horneamos</h2>
+    <div class="producto">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#f3dfbd"/><ellipse cx="24" cy="26" rx="16" ry="9" fill="#d98b3a" stroke="#8a4b12" stroke-width="2.5"/><path d="M16 22L19 30M24 20L27 31M32 22L35 30" stroke="#8a4b12" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <span>Bolillos (pieza)</span><span>$4</span>
+    </div>
+    <div class="producto">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#f9d5dc"/><rect x="8" y="30" width="32" height="5" rx="2" fill="#e9c48a"/><path d="M9 30A15 15 0 0 1 39 30Z" fill="#f2a7b5" stroke="#b5566a" stroke-width="2.5"/><path d="M17 28L20 20M24 28V18M31 28L28 20" stroke="#b5566a" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <span>Conchas (pieza)</span><span>$12</span>
+    </div>
+    <div class="producto">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#fde9b0"/><circle cx="16" cy="29" r="7" fill="#e8a64d" stroke="#8a4b12" stroke-width="2.5"/><circle cx="32" cy="29" r="7" fill="#e8a64d" stroke="#8a4b12" stroke-width="2.5"/><circle cx="24" cy="19" r="7" fill="#e8a64d" stroke="#8a4b12" stroke-width="2.5"/></svg>
+      <span>Pan de sal (bolsa)</span><span>$30</span>
+    </div>
+    <div class="producto">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#e5d6f5"/><rect x="10" y="25" width="28" height="12" rx="3" fill="#fff3d6" stroke="#8a6a3a" stroke-width="2.5"/><path d="M10 29Q15 34 20 29T30 29T38 29" fill="none" stroke="#d9687e" stroke-width="3"/><rect x="22" y="16" width="4" height="9" fill="#c96f1a"/><circle cx="24" cy="13" r="3" fill="#f5b324"/></svg>
+      <span>Pastel por encargo</span><span>Desde $350</span>
+    </div>
+
+    <h2>Opiniones de clientes</h2>
+    <div class="opinion"><p><span class="estrellas">★★★★★</span></p><p>Las conchas más suaves del barrio. Siempre llego temprano por ellas.</p><strong>Marta R.</strong></div>
+    <div class="opinion rosa"><p><span class="estrellas">★★★★★</span></p><p>El pastel del cumpleaños de mi hija quedó hermoso y delicioso.</p><strong>Luis G.</strong></div>
+    <div class="opinion azul"><p><span class="estrellas">★★★★☆</span></p><p>Buen pan y buen precio. Atienden muy amable.</p><strong>Carolina P.</strong></div>
+
+    <h2>Horarios y ubicación</h2>
+    <p>Todos los días de 6:00 a 21:00.<br>Calle Hidalgo 789, Centro.</p>
+  </main>
+  <footer><p>© 2026 Panadería El Güero</p></footer>
+</body>
+</html>
